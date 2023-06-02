@@ -5,6 +5,7 @@ import re
 from unidecode import unidecode
 
 N = 50000 #number of users to base the movies on (the more users the better the results would be)
+
 def translate_csv(filename,n):
   with open("rating.csv", "r") as f:
     reader = csv.reader(f)
@@ -15,7 +16,10 @@ def translate_csv(filename,n):
           writer.writerow(lines)
   file.close()
   f.close()
-translate_csv("rating.csv",N)
+# translate_csv("rating.csv",N)
+
+
+
 def get_movie(movie_name, year):  #returns movie id from the name
 
   include_adult = "false"
